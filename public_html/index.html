@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!--
+HOMEPAGE
+-->
+<html>
+
+<head>
+    <title>Homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="images/webicon.png">
+
+    <link href="scripts/apparelxstylesheet.css" rel="stylesheet" type="text/css" />
+    
+    <script src="scripts/slideout.min.js" type="text/javascript"></script>
+    <script src="scripts/newsletterValidation.js" type="text/javascript"></script>
+    <script src="scripts/homepageRollovers.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+    <!-- - - - - - - - - - - MOBILE SLIDE OUT MENU - - - - - - - - - - -->
+    <div id="menu">
+        <ul id="menuList">
+            <li class="searchHolder"> <input class="searchbar" type="text" value="" placeholder="search">
+                <img class="searchIconMobile" src="images/icons/search.png" alt="" />
+            </li>
+
+            <li id="home"><a class="third after" href="index.html">home</a></li>
+            <li id="products"><a class="third after" href="products.html">products</a></li>
+            <li id="shoppingCart"><a class="third after" href="shoppingcart.html">shopping cart</a></li>
+            <li id="contact"><a class="third after" href="contact.html">contact</a></li>
+        </ul>
+    </div>
+
+    <!-- - - - - - - - - - - - - DESKTOP SEARCH BAR - - - - - - - - - - - - -->
+    <div class="hideOutForMobile">
+        <img src="images/icons/search.png" class="searchIconDesktop" alt="" />
+        <div class="desktopSearchBar">
+        </div>
+        <div class="spacer"> </div>
+
+        <input class="searchbarDesktopTop" type="text" value="" placeholder="search">
+    </div>
+
+    <!-- - - - - - - - - - - - - MOBILE HEADER - - - - - - - - - - - - -->
+    <main id="panel">
+
+
+
+
+
+
+
+
+        <div class="row">
+            <div class="col12Header">
+                <header>
+                    <img class="toggle-button" src="images/icons/hamburger.png" alt="" />
+                    <div id="headerLogo"></div>
+
+
+                    <!-- - - - - - - - - - - - - SHOPPING CART COUNTER - - - - - - - - - - - - -->
+                    <table class="shoppingCart">
+                        <tr>
+                            <td>
+                                <p id="shoppingCartItems">0</p>
+                            </td>
+                            <td>
+                                <a href="shoppingcart.html">
+                                    <img src="images/icons/shoppingcart.png" id="trolley" alt="Shopping Cart" />
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- - - - - - - - - - - - -  DESKTOP NAV BAR - - - - - - - - - - - - -->
+                    <div class="alignRight">
+                        <ul id="desktopNavBar" class="hideOutForMobile">
+                            <li><a class="third after" href="index.html">home</a></li>
+                            <li><a class="third after" href="products.html">products</a></li>
+                            <li><a class="third after" href="shoppingcart.html">shopping cart</a></li>
+                            <li><a class="third after" href="contact.html">contact</a></li>
+                        </ul>
+                    </div>
+                </header>
+            </div>
+        </div>
+
+
+
+
+        <!-- - - - - - - - - - - - - HOMEPAGE IMAGES - - - - - - - - - - - - -->
+        <div class="row">
+            <div class="col-12 homepageImages">
+                <section class="homepageImages">
+                    <!-- Slideshow container -->
+                    <div class="slideshow-container">
+
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides fade">
+                            <div class="numbertext">1 / 4</div>
+                            <img src="images/slideshow/slideshow1.jpg" alt="1" class="slideshowImage" />
+                            <div class="text">Lorem Ipsum</div>
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">2 / 4</div>
+                            <img src="images/slideshow/slideshow2.jpg" alt="2" class="slideshowImage" />
+                            <div class="text">Lorem Ipsum</div>
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">3 / 4</div>
+                            <img src="images/slideshow/slideshow3.jpg" alt="3" class="slideshowImage" />
+                            <div class="text">Lorem Ipsum</div>
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">4 / 4</div>
+                            <img src="images/slideshow/slideshow4.jpg" alt="4" class="slideshowImage" />
+                            <div class="text">Lorem Ipsum</div>
+                        </div>
+                    </div>
+                    <br>
+                    <!-- The dots/circles -->
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                    </div>
+
+
+
+
+                    <h1>Lorem Ipsum</h1>
+                    <p class="homepageText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a laoreet elit.</p>
+                </section>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-12 homepageImages">
+                <section class="homepageImages">
+                    <div id="secondHomepageImage" onmouseover="rollover();" onmouseout="rollout();">
+                        <table class="homepageButtons">
+                            <tr>
+                                <td>
+                                    <a class="homepageButtons" href="#">Shop Womens</a>
+                                </td>
+                                <td>
+                                    <a class="homepageButtons" href="#">Shop Mens</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <h1>Sed fermentum</h1>
+                    <p class="homepageText">Lacus mi convallis libero, vitae ultricies lectus erat eu dolor.</p>
+                </section>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 homepageImages">
+                <section class="homepageImages">
+                    <div id="thirdHomepageImage">
+                        <table class="homepageButtons">
+                            <tr>
+                                <td>
+                                    <a class="homepageButtons" href="#">Shop Womens</a>
+                                </td>
+                                <td>
+                                    <a class="homepageButtons" href="#">Shop Mens</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <h1>Aenean blandit</h1>
+                    <p class="homepageText">Aenean blandit fringilla tortor a mattis.</p>
+                </section>
+            </div>
+        </div>
+
+        <!-- - - - - - - - - - - - - NEWSLETTER SIGN UP BAR - - - - - - - - - - - - -->
+        <footer class="row">
+            <div class="col-3">
+
+                <h2>Sign up to our newsletter</h2>
+            </div>
+            <div class="col-5">
+                <!-- - - - - - - - - - - - - SIGN-UP FORM - - - - - - - - - - - - -->
+                <input id="userNameInput" class="newsletterField" type="text" placeholder="name">
+                <p id="nameMessage"></p>
+                <input id="userEmailInput" class="newsletterField" type="text" placeholder="email">
+                <p id="emailMessage"></p>
+                <input id="newsletterSubmitButton" class="button newsletterField" type="button" value="submit" onclick="newsletterValidator();">
+
+            </div>
+            <div class="col-4" id="socialMediaIcons">
+                <img src="images/icons/socialMediaIcons.png" class="socialMediaIcons" alt="Social Media">
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="scripts/slideshowScript.js" type="text/javascript"></script>
+
+    <!-- - - - - - - - - - - SCRIPT FOR SLIDE-OUT MENU - - -  - - - - - - - -->
+    <script src="scripts/slideoutBottomScript.js" type="text/javascript"></script>
+
+</body>
+
+</html>

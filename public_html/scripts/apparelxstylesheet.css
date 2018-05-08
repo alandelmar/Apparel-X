@@ -1,0 +1,1284 @@
+@charset "UTF-8";
+
+/* ---------------------- MOBILE FIRST STYLING: ------------------------ */
+
+/* -- ONLY THE MOBILE SETTINGS WILL LOAD UNLESS THE SCREEN IS DESKTOP SIZE -- */
+
+* {
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* ------------ MOBILE FIRST ------------ */
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    width: 100%;
+
+    /* ------------ FOR HOMEPAGE ------------ */
+}
+
+body {
+    background-color: #FFFFFF;
+    letter-spacing: 0.05em;
+}
+
+p {
+    font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    color: #000000;
+    font-size: 0.97em;
+    letter-spacing: 0.03em;
+}
+
+.centredP {
+    text-align: center;
+}
+
+a {
+    font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    text-decoration: none;
+    font-size: 0.97em;
+    color: #7A5B42;
+    letter-spacing: 0;
+}
+
+a:visited {
+    font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    font-size: 0.97em;
+    color: #302C2B;
+}
+
+a:hover,
+a:active {
+    font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    font-size: 0.97em;
+    color: #C4DEDC;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+table {
+    text-align: left;
+}
+
+td {
+    vertical-align: top;
+    width: 50%;
+}
+
+.plainBox,
+.checkoutBox {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: none;
+    background-color: #E0D9D6;
+    position: relative;
+    height: auto;
+}
+
+.totalUnderline {
+    border: 1px solid #A39C9B;
+    text-align: left;
+    width: 100%;
+}
+
+.alignRight {
+    text-align: right !important;
+}
+
+.noBottomMargin {
+    margin-bottom: 0;
+}
+
+h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    color: #266D73;
+    letter-spacing: 0.04em;
+}
+
+h4 {
+    font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    color: #302C2B;
+    letter-spacing: 0.15em;
+}
+
+h3.alignRight {
+   margin-top: 0.8em;
+}
+
+.totalTable {
+    vertical-align: middle;
+}
+/* ------------ HEADER BAR ------------ */
+
+.col12Header {
+    padding-bottom: 0 !important;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.toggle-button {
+    height: 25px;
+    width: 30px;
+    position: relative;
+    float: left;
+}
+
+#headerLogo {
+    display: inline-block;
+    background-image: url(../images/header_mobile.png);
+    width: 127px;
+    height: 36px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 20px;
+    bottom: 6px;
+}
+
+#trolley {
+    width: 32px;
+    height: auto;
+}
+
+.shoppingCartItems,
+#shoppingCartItems {
+    font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    font-size: 1em;
+    font-weight: bold;
+    color: #266D73;
+    margin-top: 0.5em;
+}
+
+.shoppingCart {
+    height: auto;
+    text-align: right;
+    width: 110px;
+    float: right;
+    position: absolute;
+    right: 30px;
+    top: 6px;
+}
+
+/* ------------ HOMEPAGE IMAGE FEED ------------ */
+
+.homepageImages {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 1.6% auto !important;
+}
+
+h1 {
+    font-family: Georgia, "Lucida Bright", "DejaVu Serif", Constantia, "serif";
+    font-size: 2.2em;
+    text-align: center;
+    font-weight: normal;
+    color: #266D73;
+    margin-bottom: 0.15em;
+    margin-top: 0.5em;
+    letter-spacing: 0.04em;
+}
+
+p.homepageText {
+    font-size: 0.97em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+hr {
+    display: block;
+    width: 48%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 1px;
+    color: #FFFFFF;
+}
+
+
+/* ------------ THE BUTTONS OVERLAYING THE IMAGES ON THE HOMEPAGE ------------*/
+
+table.homepageButtons {
+    border: none;
+    padding-left: 40px;
+    padding-top: 295px;
+    text-align: center;
+    margin: auto;
+    top: 200px;
+
+}
+
+a.homepageButtons {
+    border: 1px solid #302C2B;
+    width: 200px !important;
+    padding: 0.8em 0.4em;
+    height: auto;
+    font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    text-decoration: none;
+    font-size: 0.97em;
+    color: #302C2B;
+    background-image: url(../images/icons/homepageButton.png);
+    background-size: cover;
+}
+
+a.homepageButtons:hover,
+a.homepageButtons:active {
+    font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    font-size: 0.97em;
+    color: #302C2B !important;
+    background-image: url(../images/icons/homepageButton_active.png);
+    background-size: cover;
+}
+
+a.homepageButtons:visited {
+    font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    font-size: 0.97em;
+    color: #302C2B !important;
+    background-image: url(../images/icons/homepageButton.png);
+    background-size: cover;
+}
+
+#mainHomepageImage,
+#secondHomepageImage,
+#thirdHomepageImage {
+    text-align: center;
+    width: 100%;
+    background-size: cover;
+}
+
+#mainHomepageImage {
+    height: 350px;
+    background-image: url(../images/homepage/frontpage_mobile.jpg);
+}
+
+#secondHomepageImage {
+    height: 350px;
+    background-image: url(../images/homepage/menswear_mobile.jpg);
+}
+
+#thirdHomepageImage {
+    height: 350px;
+    background-image: url(../images/homepage/coffee_mobile.jpg);
+}
+
+/* ------------ PRODUCT PAGE SECTIONS ------------ */
+
+h3.productName {
+    font-family: Georgia, "Lucida Bright", "DejaVu Serif", Constantia, "serif";
+    font-size: 1.6em;
+    text-align: left;
+    font-weight: normal;
+    color: #266D73;
+    margin-top: 0.2em;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.productPanel,
+.dropdownMenu {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 15px;
+    border: none;
+    background-color: #E0D9D6;
+}
+
+.clothingPhoto {
+    width: 100%;
+    height: auto;
+}
+
+.productDetails {
+    padding-left: 1.4em;
+}
+
+a.addToCart {
+    border: 1px solid #302C2B;
+    width: 40%;
+    padding: 0.8em 0.4em;
+    margin: 0;
+    height: auto;
+    font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    text-decoration: none;
+    font-size: 1em;
+    color: #302C2B !important;
+    background-color: #C4DEDC;
+    letter-spacing: 0;
+    font-weight: bold;
+}
+
+a.addToCart:hover {
+    font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    font-size: 1em;
+    color: #302C2B !important;
+    background-color: #EFEFEF;
+    font-weight: bold;
+}
+
+a.addToCart:active {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+#userNameInput,
+#userEmailInput,
+#commentsBox {
+    text-align: left;
+    width: 90%;
+}
+
+select {
+    border: 1px solid #302C2B;
+    margin: 0.5em 0.2em;
+    height: auto;
+    font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    text-decoration: none;
+    font-size: 0.9em;
+    color: #302C2B;
+    background-color: #EFEFEF;
+    padding: 0.2em;
+    margin-left: 0;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+.dropdownMenu {
+    text-align: center;
+    border: 1px solid #A39C9B;
+}
+
+#dropdownMenuList {
+    font-size: 1em !important;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+}
+
+.desktopItemInformation {
+    display: none;
+}
+
+.clothingPhoto {
+    border: 1px solid #A39C9B;
+}
+
+/* ------------ SHOPPING CART PAGE SECTIONS ------------ */
+
+#deliveryPrice {
+    width: 200px;
+}
+
+.removeLink {
+    color: #FF0000 !important;
+    font-size: 0.85em;
+}
+
+.removeLink:hover,
+.removeLink:active {
+    color: #7A5B42 !important;
+    font-size: 0.85em;
+}
+
+.totalTable,
+.subtotalTable {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    margin-bottom: 0;
+}
+
+.weAccept {
+    width: 60%;
+    height: auto;
+}
+
+.centred {
+    text-align: center;
+}
+
+
+
+
+
+a.topCheckout {
+    border: 1px solid #302C2B;
+    padding: 0.8em 0.4em;
+    margin: 15px;
+    height: auto;
+    font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    text-decoration: none;
+    font-size: 1em;
+    color: #302C2B;
+    background-color: #C4DEDC;
+}
+
+a.topCheckout:hover {
+    font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    font-size: 1em;
+    color: #302C2B !important;
+    background-color: #EFEFEF;
+}
+
+a.topCheckout:active {
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+
+/* ------------ CONTACT PAGE SECTIONS ------------ */
+
+.commentsBox {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    border: none;
+    background-color: #E0D9D6;
+    text-align: center;
+}
+
+#streetViewImage {
+    width: 100%;
+    border: 1px solid #A39C9B;
+    height: 300px;
+}
+
+/* ------------ NEWSLETTER SIGNUP & INPUT FIELD STYLES ------------*/
+
+footer {
+    background-color: #E0D9D6;
+    padding: 0px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+h2 {
+    font-family: Georgia, "Lucida Bright", "DejaVu Serif", Constantia, "serif";
+    font-size: 1.6em;
+    text-align: center;
+    font-weight: normal;
+    color: #266D73;
+    margin-top: 0.3em;
+    letter-spacing: 0.02em;
+}
+
+input {
+    font-size: 1em;
+    color: #000000;
+    border: 1px solid #302C2B;
+    padding: 0.6em;
+}
+
+.signupForm {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#userNameInput,
+#userEmailInput,
+#newsletterSubmitButton,
+#SubmitButton {
+    width: 255px;
+    clear: both;
+    margin-bottom: 1em;
+    text-align: center;
+    height: 2.8em;
+    position: relative;
+    float: none;
+}
+
+.email {
+    letter-spacing: 0.06em;
+}
+
+input.button {
+    font-size: 1.2em;
+    background-color: #C4DEDC;
+    color: #302C2B;
+    height: 2.1em;
+}
+
+input:active {
+    background-color: #FFFFFF;
+}
+
+input:hover {
+    background-color: #FFFFFF;
+}
+
+#commentsBox {
+    width: 70%;
+    height: 170px;
+    margin-bottom: 1em;
+    padding: 0.6em;
+    clear: both;
+    text-align: center;
+    position: relative;
+    float: none;
+    border: 1px solid #302C2B;
+    font-size: 1em;
+}
+
+#userEmailInputCommentsBox,
+#userNameInputCommentsBox {
+    width: 70%;
+}
+
+.socialMediaIcons {
+    width: 70%;
+    margin-top: 0;
+}
+
+#nameMessage,
+#emailMessage,
+#commentsBoxEmailValidator,
+#commentsBoxNameValidator,
+#commentsBoxTextValidator {
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 1.2em;
+    font-size: 0.9em;
+}
+
+
+
+/* ------------ NAVBAR /MENU LIST ------------ */
+
+#menuList ul {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    text-align: center;
+    margin: 0;
+    width: auto;
+
+}
+
+#menuList li {
+    text-align: center;
+    padding: 0.8em 0.4em;
+    border: 1px solid #A39C9B;
+    list-style: none;
+    width: 67%;
+    background-color: #E0D9D6;
+    font-size: 1.2em;
+}
+
+#menuList li:active {
+    background-color: #EFEFEF;
+}
+
+.searchbarMobile {
+    text-align: center;
+    background-color: #E0D9D6;
+}
+
+#menuList a,
+#menuList a:visited,
+#menuList a:hover,
+#menuList a:active {
+    color: #302C2B;
+}
+
+.searchbar {
+    width: 95% !important;
+}
+
+.searchIconMobile {
+    position: relative;
+    float: right;
+    right: 20px;
+    top: -38px;
+    z-index: 20;
+
+}
+
+
+/* ------------ FOR SLIDE-OUT MENU ------------ */
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.slideout-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    width: 396px;
+    margin-right: 0;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    display: none;
+}
+
+.slideout-panel {
+    position: relative;
+    z-index: 1;
+    will-change: transform;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+    overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+    display: block;
+}
+
+/* ------------ BLOCKED OUT ELEMENTS FOR DESKTOP ------------ */
+
+.hideOutForMobile {
+    display: none;
+}
+
+html {
+    padding-right: 15px;
+}
+
+
+
+
+
+
+/* Slideshow container */
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+
+.text {
+    color: #FFFFFF;
+    font-size: 1em;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    font-family: helvetica neue, sans-serif;
+    letter-spacing: 0.1em;
+}
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.slideshowImage {
+    width: 100%;
+    margin: 0 !important;
+    height: auto;
+}
+
+
+
+
+
+
+
+/* -------------------------------------------------------------------------------------------------------------------------- */
+
+/* -------- IF SCREEN GOES BEYOND 768px WIDTH THEN BELOW CLASSES CONVERT SITE INTO DESKTOP VERSION -------------------------- */
+
+@media only screen and (min-width: 768px) {
+    .col-1 {
+        width: 8.33%;
+    }
+    .col-2 {
+        width: 16.66%;
+    }
+    .col-3 {
+        width: 25%;
+    }
+    .col-4 {
+        width: 33.32%;
+    }
+    .col-5 {
+        width: 41.65%;
+    }
+    .col-6 {
+        width: 50%;
+    }
+    .col-7 {
+        width: 58.33%;
+    }
+    .col-8 {
+        width: 66.66%;
+    }
+    .col-9 {
+        width: 75%;
+    }
+    .col-10 {
+        width: 83.33%;
+    }
+    .col-11 {
+        width: 91.66%;
+    }
+    .col-12 {
+        width: 100%;
+    }
+    .col12Header {
+        width: 100%;
+    }
+    html,
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    table.productPanel,
+    div.dropdownMenu,
+    div.checkoutBox {
+        background-color: #FFFFFF;
+        border: 1px solid #A39C9B;
+    }
+    .desktopItemInformation {
+        display: block;
+    }
+    .clothingPhoto {
+        border: none;
+    }
+    #mainHomepageImage {
+        height: 500px;
+        background-image: url(../images/homepage/frontpage_desktop.jpg);
+    }
+    #secondHomepageImage {
+        height: 500px;
+        background-image: url(../images/homepage/menswear_desktop.jpg);
+    }
+    #thirdHomepageImage {
+        height: 500px;
+        background-image: url(../images/homepage/coffee_desktop.jpg);
+    }
+    table.homepageButtons {
+        padding-top: 440px;
+    }
+    .checkoutBox {
+        padding: 30px;
+    }
+    hr {
+        border: 1px solid #C4DEDC;
+    }
+    /* ------------ NAVIGATION BAR FOR DESKTOP------------ */
+    .col12Header {
+        padding-bottom: 0 !important;
+        padding-top: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .toggle-button {
+        display: none;
+    }
+    #headerLogo {
+        display: inline-block;
+        background-image: url(../images/header_desktop.png);
+        width: 234px;
+        height: 66px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+        left: 20px;
+        bottom: 6px;
+    }
+
+    .shoppingCart {
+        width: 100px;
+
+    }
+    #shoppingCartItems {
+        font-size: 1.1em;
+        margin-top: 0.3em;
+
+    }
+    .searchbarDesktopTop {
+        position: absolute;
+        float: right;
+        right: 150px;
+        top: 8px;
+        z-index: 2;
+        padding: 5px;
+        width: 220px;
+
+    }
+    .searchIconDesktop {
+        display: block !important;
+        position: absolute;
+        right: 156px;
+        top: 13px;
+        width: 20px;
+        z-index: 4;
+
+    }
+
+    #desktopNavBar ul {
+        margin-left: 300px!important;
+        margin-right: 200px !important;
+        padding: 0;
+        clear: both;
+        float: right;
+        position: absolute;
+        top: 100px;
+        width: 50%;
+
+
+    }
+    #desktopNavBar li {
+        display: inline-block;
+        text-align: right !important;
+        padding: 0 6%;
+        border: 1px solid #fff;
+        text-align: right;
+    }
+    .desktopSearchBar {
+        width: 100%;
+        height: 50px;
+        position: absolute;
+        margin: auto !important;
+        background-color: #E0D9D6;
+        top: 0;
+        z-index: 1;
+        clear: both;
+    }
+    .spacer {
+        width: 100%;
+        height: 50px;
+        position: absolute;
+        margin: auto !important;
+        padding: 0;
+        background-color: transparent;
+        top: 0;
+        position: absolute;
+        left: 0;
+        clear: both;
+    }
+
+    header {
+        margin-top: 60px;
+        margin-bottom: 0;
+        background-color: #FFFFFF;
+    }
+    /* ------------ FOOTER (SIGN UP BAR) ADJUSTMENT FOR DESKTOP ------------ */
+    footer {
+        width: 100%;
+        position: relative;
+        background-color: #E0D9D6;
+        bottom: 0;
+        z-index: 1;
+        clear: both;
+        margin-top: 100px !important;
+    }
+    #newsletterSubmitButton,
+    #userEmailInput,
+    #userNameInput {
+        font-size: 0.8em !important;
+        padding: 0 0.2em;
+        max-width: 180px;
+    }
+    form.signupForm {
+        margin-left: 330px;
+    }
+    .padding {
+        padding-top: 150px;
+
+    }
+    #emailMessage {
+        position: absolute;
+        bottom: -8px;
+        left: 43%;
+        clear: both;
+    }
+    #nameMessage {
+        position: absolute;
+        bottom: -8px;
+        left: 30%;
+        clear: both;
+    }
+    #emailMessage,
+    #nameMessage {
+        font-size: 0.8em;
+    }
+    h2 {
+        font-family: Georgia, "Lucida Bright", "DejaVu Serif", Constantia, "serif";
+        font-size: 1.6em;
+        text-align: left;
+        font-weight: normal;
+        color: #266D73;
+        margin: 0;
+        margin-top: 0;
+        letter-spacing: 0.02 !important;
+
+    }
+    /* ------------ SHOPPING CART PAGE ADJUSTMENT FOR DESKTOP ------------ */
+    .centredP,
+    .weAccept,
+    .totalTable {
+        display: block;
+        text-align: left;
+    }
+    .hideOutForMobile {
+        display: block;
+    }
+    .hideOutForDesktop {
+        display: none;
+    }
+    #menuList ul {
+        margin: 0;
+        padding: 0;
+        width: auto;
+        width: 80% !important;
+    }
+    #menuList li {
+        display: inline-block;
+        text-align: center;
+        padding: 4px 10px;
+        border: none;
+        width: 18.8%;
+        background-color: #FFFFFF;
+
+    }
+
+
+    /* ------------ PRODUCT PAGE ADJUSTMENT FOR DESKTOP ------------ */
+    #dropdownMenuList {
+        font-size: 1em !important;
+        margin: 0 auto;
+        width: 80%;
+        text-align: center;
+    }
+    #dropdownMenuList {
+        margin: 0 auto;
+        width: 30%;
+    }
+
+    /* ---------- UNDERLINE ROLLOVER EFFECT IN DESKTOP NAV BAR ---------- */
+    a,
+    a:visited,
+    a:hover,
+    a:active {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        position: relative;
+        transition: 0.2s color ease;
+        text-decoration: none;
+        color: #7A5B42;
+        font-size: 1.1em;
+    }
+    a:hover {
+        color: #C4DEDC !important;
+    }
+    a.before:before,
+    a.after:after {
+        content: "";
+        transition: 0.2s all ease;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        position: absolute;
+    }
+    a.before:before {
+        top: -0.25em;
+    }
+    a.after:after {
+        bottom: -0.25em;
+    }
+    a.before:before,
+    a.after:after {
+        height: 5px;
+        height: 1px;
+        width: 0;
+        background: #C4DEDC;
+    }
+    a.third:after {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    a.before:hover:before,
+    a.after:hover:after {
+        width: 100%;
+    }
+
+    .searchbar,
+    .searchIconMobile,
+    .searchHolder {
+        display: none;
+    }
+    #menuList {
+        position: relative;
+    }
+    /* ------------ CONTACT PAGE ADJUSTMENT FOR DESKTOP ------------ */
+    .plainBox,
+    .checkoutBox,
+    .commentsBox {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        margin-bottom: 15px;
+        padding: 15px;
+        border: none;
+        background-color: #FFFFFF;
+        position: relative;
+        height: auto;
+        border: 1px solid #A39C9B;
+        text-align: left;
+    }
+    .signupForm,
+    #userNameInput,
+    #userEmailInput,
+    #commentsBox {
+        text-align: left;
+        width: 70% !important;
+    }
+    #userEmailInputCommentsBox,
+    #userNameInputCommentsBox {
+        width: 40%;
+    }
+    /* ------------ SHOPPING CART PAGE ADJUST FOR DESKTOP ------------ */
+    .totalUnderline {
+        border: 1px solid #C4DEDC;
+        text-align: left;
+        width: 100%;
+    }
+    /* ------------ RESIZING SUBMIT BUTTONS ------------ */
+    #newsletterSubmitButton,
+    #SubmitButton {
+        width: auto;
+        clear: both;
+        margin-bottom: 0.5em;
+        padding: 0 1.6em;
+        text-align: center;
+        height: 2.8em;
+        position: relative;
+        float: none;
+    }
+    a.addToCart {
+        padding: 0.6em 1.6em;
+    }
+    .removeLink {
+        color: #FF0000 !important;
+        font-size: 0.85em;
+    }
+    .removeLink:hover,
+    .removeLink:active {
+        color: #7A5B42;
+        font-size: 0.85em;
+    }
+    .makeBold {
+        font-weight: bold;
+    }
+    #mainHomepageImage {
+        margin-top: 25px !important;
+    }
+    #secondHomepageImage,
+    #thirdHomepageImage {
+        margin-top: 100px !important;
+    }
+    #headerLogo {
+        position: absolute;
+        top: 68px;
+        left: 40px;
+    }
+    .col12Header {
+
+        padding-top: 30px;
+    }
+
+    .marginTopSpace {
+        margin-top: 24px;
+    }
+
+    footer.col-4 {
+        text-align: left;
+    }
+    .newsletterField {
+        position: relative;
+        display: inline-block;
+        float: left;
+    }
+    div#socialMediaIcons.col-4 {
+        text-align: right;
+        padding-bottom: 0 !important;
+        padding-top: 15px !important;
+    }
+    .socialMediaIcons {
+        width: 250px;
+    }
+    div.col-3 {
+        text-align: left !important;
+    }
+    .homepageImages {
+        margin-bottom: 0 !important;
+    }
+    a{  letter-spacing: 0.08em;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    #desktopNavBar li {
+        display: inline-block;
+        text-align: right !important;
+        padding: 0 1.5%;
+        border: 1px solid #fff;
+        text-align: right;
+    }
+    #newsletterSubmitButton,
+    #userEmailInput,
+    #userNameInput {
+        font-size: 0.8em !important;
+        padding: 0 0.2em;
+        max-width: 180px;
+    }
+    form.signupForm {
+        margin-left: 330px;
+    }
+    .padding {
+        padding-top: 150px;
+
+    }
+    #emailMessage {
+        position: absolute;
+        bottom: -8px;
+        left: 43%;
+        clear: both;
+    }
+    #nameMessage {
+        position: absolute;
+        bottom: -8px;
+        left: 30%;
+        clear: both;
+    }
+    #emailMessage,
+    #nameMessage {
+        font-size: 0.8em;
+    }
+    .slideshow-container {
+        margin-top: 28px;
+    }
+    a.addToCart {
+        padding: 0.6em 1.6em;
+        letter-spacing: 0 !important;
+    }
+    a{  letter-spacing: 0.09em;}
+}

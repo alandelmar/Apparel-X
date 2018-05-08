@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--
+CONTACT PAGE
+-->
+<html>
+
+<head>
+    <title>Contact</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="images/webicon.png">
+
+    <link href="scripts/apparelxstylesheet.css" rel="stylesheet" type="text/css" />
+    
+    <script src="scripts/slideout.min.js" type="text/javascript"></script>
+    <script src="scripts/newsletterValidation.js" type="text/javascript"></script>
+    <script src="scripts/contactFormValidation.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <!-- - - - - - - - - - - MOBILE SLIDE OUT MENU - - - - - - - - - - -->
+    <div id="menu">
+        <ul id="menuList">
+            <li id="searchHolder"> <input class="searchbar" type="text" value="" placeholder="search">
+                <img class="searchIconMobile" src="images/icons/search.png" alt="" />
+            </li>
+
+            <li id="home"><a class="third after" href="index.html">home</a></li>
+            <li id="products"><a class="third after" href="products.html">products</a></li>
+            <li id="shoppingCart"><a class="third after" href="shoppingcart.html">shopping cart</a></li>
+            <li id="contact"><a class="third after" href="contact.html">contact</a></li>
+        </ul>
+    </div>
+
+    <!-- - - - - - - - - - - - - DESKTOP SEARCH BAR - - - - - - - - - - - - -->
+<div class="hideOutForMobile">
+        <img src="images/icons/search.png" class="searchIconDesktop" alt="" />
+        <div class="desktopSearchBar">
+        </div>
+        <div class="spacer"> </div>
+
+        <input class="searchbarDesktopTop" type="text" value="" placeholder="search">
+    </div>
+    <main id="panel">
+        <div class="row">
+            <div class="col12Header">
+                <!-- - - - - - - - - - - - - HEADER - - - - - - - - - - - - -->
+                <header>
+                    <img class="toggle-button" src="images/icons/hamburger.png" alt="" />
+                    <div id="headerLogo"></div>
+
+                    <!-- - - - - - - - - - - - - SHOPPING CART COUNTER - - - - - - - - - - - - -->
+                    <table class="shoppingCart">
+                        <tr>
+                            <td>
+                                <p id="shoppingCartItems">0</p>
+                            </td>
+                            <td>
+                                <a href="shoppingcart.html"><img src="images/icons/shoppingcart.png" id="trolley" alt="Shopping Cart"/></a>
+                                
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- - - - - - - - - - - - -  DESKTOP NAV BAR - - - - - - - - - - - - -->
+                    <div class="alignRight">
+                        <ul id="desktopNavBar" class="hideOutForMobile">
+                            <li><a class="third after" href="index.html">home</a></li>
+                            <li><a class="third after" href="products.html">products</a></li>
+                            <li><a class="third after" href="shoppingcart.html">shopping cart</a></li>
+                            <li><a class="third after" href="contact.html">contact</a></li>
+                        </ul>
+                    </div>
+                </header>
+            </div>
+        </div>
+
+        <!-- - - - - - - - - - - - - STREET VIEW - - - - - - - - - - -->
+        <div class="row">
+            <div class="col-5">
+                <div class="marginTopSpace">
+                    <section class="plainBox">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4766.400138144237!2d-6.2656259!3d53.321771!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sie!4v1513377607670" frameborder="0" allowfullscreen id="streetViewImage"></iframe>
+                        <table>
+                            <tr>
+                                <td>
+                                    <p>Apparel X</p>
+                                    <br>
+                                    <p>123 Irish Street,<br>Dublin,<br>Ireland</p>
+                                </td>
+                                <td>
+                                    <p>01 456 9999</p>
+                                    <br>
+                                    <p><a href="#" class="email">info@apparelx.com</a></p>
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                </div>
+            </div>
+
+            <!-- - - - - - - - - - - CONTACT FORM - - - - - - - - - - -->
+            <div class="col-7">
+                <div class="marginTopSpace">
+                    <section class="commentsBox">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a laoreet elit.</p>
+                        <form>
+                            <p>
+                                <input id="userNameInputCommentsBox" type="text" placeholder="name">
+                                <br>
+                                <span id="commentsBoxNameValidator"></span></p>
+                            <p><input id="userEmailInputCommentsBox" type="email" placeholder="email">
+                                <br>
+                                <span id="commentsBoxEmailValidator"></span>
+                            </p>
+                            <p>
+                                <textarea id="commentsBox" placeholder="comments"></textarea><br>
+                                <span id="commentsBoxTextValidator"></span><br>
+                                <p>
+                                    <input id="SubmitButton" class="button" type="button" value="submit" onclick="contactFormValidation();">
+                                </p>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <!-- - - - - - - - - - - - - NEWSLETTER SIGN UP BAR - - - - - - - - - - - - -->
+        <footer class="row">
+            <div class="col-3">
+
+                <h2>Sign up to our newsletter</h2>
+            </div>
+            <div class="col-5">
+                <!-- - - - - - - - - - - - - SIGN-UP FORM - - - - - - - - - - - - -->
+                <input id="userNameInput" class="newsletterField" type="text" placeholder="name">
+                <p id="nameMessage"></p>
+                <input id="userEmailInput" class="newsletterField" type="text" placeholder="email">
+                <p id="emailMessage"></p>
+                <input id="newsletterSubmitButton" class="button newsletterField" type="button" value="submit" onclick="newsletterValidator();">
+
+            </div>
+            <div class="col-4" id="socialMediaIcons">
+                <img src="images/icons/socialMediaIcons.png" class="socialMediaIcons" alt="Social Media">
+            </div>
+        </footer>
+
+    </main>
+
+    <!------------ SCRIPT FOR SLIDE-OUT MENU ------------>
+    <script src="scripts/slideoutBottomScript.js" type="text/javascript"></script>
+</body>
+
+</html>

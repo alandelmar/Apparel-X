@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<!--
+SHOPPING CART PAGE
+-->
+<html>
+
+<head>
+    <title>Shopping Cart</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="images/webicon.png">
+
+    <link href="scripts/apparelxstylesheet.css" rel="stylesheet" type="text/css" />
+    
+    <script src="scripts/slideout.min.js" type="text/javascript"></script>
+    <script src="scripts/newsletterValidation.js" type="text/javascript"></script>
+    <script src="scripts/shoppingCartHandlers.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <!-- ---------- MOBILE SLIDE OUT MENU ---------- -->
+    <div id="menu">
+        <ul id="menuList">
+            <li id="searchHolder"> <input class="searchbar" type="text" value="" placeholder="search">
+                <img class="searchIconMobile" src="images/icons/search.png" alt="" />
+            </li>
+            <li id="home"><a class="third after" href="index.html">home</a></li>
+            <li id="products"><a class="third after" href="products.html">products</a></li>
+            <li id="shoppingCart"><a class="third after" href="#">shopping cart</a></li>
+            <li id="contact"><a class="third after" href="contact.html">contact</a></li>
+        </ul>
+    </div>
+
+    <!-- - - - - - - - - - - - - DESKTOP SEARCH BAR - - - - - - - - - - - - -->
+    <div class="hideOutForMobile">
+        <div class="desktopSearchBar">
+        </div>
+        <div class="spacer"> </div>
+
+        <input class="searchbarDesktopTop" type="text" value="" placeholder="search">
+        <img src="images/icons/search.png" class="searchIconDesktop" alt="" />
+    </div>
+
+    <main id="panel">
+        <div class="row">
+            <div class="col12Header">
+                <header>
+                    <img class="toggle-button" src="images/icons/hamburger.png" alt="" />
+                    <div id="headerLogo"></div>
+
+
+                    <!-- - - - - - - - - - - - - SHOPPING CART COUNTER - - - - - - - - - - - - -->
+                    <table class="shoppingCart">
+                        <tr>
+                            <td>
+                                <p id="shoppingCartItems">€734.00</p>
+                            </td>
+                            <td>
+
+                                <a href="shoppingcart.html">
+                                    <img src="images/icons/shoppingcart.png" id="trolley" alt="Shopping Cart" />
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- - - - - - - - - - - - -  DESKTOP NAV BAR - - - - - - - - - - - - -->
+                    <div class="alignRight">
+                        <ul id="desktopNavBar" class="hideOutForMobile">
+                            <li><a class="third after" href="index.html">home</a></li>
+                            <li><a class="third after" href="products.html">products</a></li>
+                            <li><a class="third after" href="shoppingcart.html">shopping cart</a></li>
+                            <li><a class="third after" href="contact.html">contact</a></li>
+                        </ul>
+                    </div>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <div class="marginTopSpace">
+                    <table class="productPanel">
+                        <tr>
+                            <td width="50%">
+                                <img class="clothingPhoto" src="images/clothes/blazer.jpg" alt="" />
+                            </td>
+                            <td class="productDetails">
+                                <h3 class="productName">Blazer</h3>
+                                <p class="makeBold">€XX.XX</p>
+                                <p class="desktopItemInformation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a laoreet elit.</p>
+                                <p>
+                                    <select name="size">
+                                    <option value="select">size</option>
+                                    <option value="small">small</option>
+                                    <option value="small">medium</option>
+                                    <option value="small">large</option>
+                                </select>
+                                    <select name="qty">
+                                    <option value="select">qty</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                </p>
+                                <p><a href="#" class="addToCart" onclick="deductItem(200, 0);">Remove item</a></p>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="productPanel">
+                        <tr>
+                            <td width="50%">
+                                <img class="clothingPhoto" src="images/clothes/dress1.jpg" alt="Cream Dress" />
+                            </td>
+                            <td class="productDetails">
+                                <h3 class="productName">Cream dress</h3>
+                                <p><b>€195.00</b></p>
+                                <p class="desktopItemInformation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a laoreet elit.</p>
+                                <p>
+                                    <select name="size">
+                                    <option value="select">size</option>
+                                    <option value="small">small</option>
+                                    <option value="small">medium</option>
+                                    <option value="small">large</option>
+                                </select>
+                                    <select name="qty">
+                                    <option value="select">qty</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                </p>
+                                <p><a href="javascript:;" class="addToCart" id="creamDress" onclick="deductItem(195, 1);">Remove item</a></p>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="productPanel">
+                        <tr>
+                            <td width="50%">
+                                <img class="clothingPhoto" src="images/clothes/shoe.jpg" alt="Ladies Shoes" />
+                            </td>
+                            <td class="productDetails">
+                                <h3 class="productName">Ladies Shoes</h3>
+                                <p><b>€210.00</b></p>
+                                <p class="desktopItemInformation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a laoreet elit.</p>
+                                <p>
+                                    <select name="size">
+                                    <option value="select">size</option>
+                                    <option value="small">small</option>
+                                    <option value="small">medium</option>
+                                    <option value="small">large</option>
+                                </select>
+                                    <select name="qty">
+                                    <option value="select">qty</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                </p>
+                                <p><a href="javascript:;" class="addToCart" id="ladiesShoes" onclick="deductItem(210, 2)">Remove item</a></p>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="productPanel">
+                        <tr>
+                            <td width="50%">
+                                <img class="clothingPhoto" src="images/clothes/jumper_mens1.jpg" alt="Black Jumper" />
+                            </td>
+                            <td class="productDetails">
+                                <h3 class="productName">Black Jumper</h3>
+                                <p><b>€89.00</b></p>
+                                <p class="desktopItemInformation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a laoreet elit.</p>
+                                <p>
+                                    <select name="size">
+                                    <option value="select">size</option>
+                                    <option value="small">small</option>
+                                    <option value="small">medium</option>
+                                    <option value="small">large</option>
+                                </select>
+                                    <select name="qty">
+                                    <option value="select">qty</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                </p>
+                                <p><a href="javascript:;" class="addToCart" id="blackJumper" onclick="deductItem(89, 3);">Remove item</a></p>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="productPanel">
+                        <tr>
+                            <td width="50%">
+                                <img class="clothingPhoto" src="images/clothes/tshirt.jpg" alt="T-Shirt" />
+                            </td>
+                            <td class="productDetails">
+                                <h3 class="productName">T-shirt</h3>
+                                <p><b>€40.00</b></p>
+                                <p class="desktopItemInformation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a laoreet elit.</p>
+                                <p>
+                                    <select name="size">
+                                    <option value="select">size</option>
+                                    <option value="small">small</option>
+                                    <option value="small">medium</option>
+                                    <option value="small">large</option>
+                                </select>
+                                    <select name="qty">
+                                    <option value="select">qty</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                </p>
+                                <p><a href="javascript:;" class="addToCart" id="tshirt" onclick="deductItem(40, 4);">Remove item</a></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="marginTopSpace">
+                    <div class="checkoutBox">
+                        <table class="totalTable">
+                            <tr>
+                                <td>
+                                    <p class="noBottomMargin"><b>Total</b></p>
+                                </td>
+                                <td>
+                                    <h3 class="alignRight">€<span id="grandTotal">734</span>.00</h3><br><br>
+                                </td>
+                            </tr>
+                        </table>
+                        <hr class="totalUnderline">
+
+                        <table class="subtotalTable">
+                            <tr>
+                                <td>
+                                    <h3>Subtotal</h3>
+                                </td>
+                                <td>
+                                    <h4 class="alignRight">€<span id="productsTotal">734</span>.00</h4>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table class="subtotalTable">
+                            <tr>
+                                <td>
+                                    <h3>Delivery</h3>
+                                </td>
+                                <td>
+                                    <h4 class="alignRight">€<span id="deliveryCharge">0</span>.00</h4>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <select name="Delivery" id="deliveryPrice" onchange="deliveryPriceFunction();">
+                                <option value="0">choose delivery ...</option>
+                                <option value="0">standard (free)</option>
+                                <option value="15">next day - next day delivery (€15.00)</option>
+                                <option value="8">express - 5 working days (€8.00)</option>
+                            </select>
+
+                        <p class="centredP">We Accept<br>
+                            <img src="images/icons/weaccept.png" alt="We Accept" class="weAccept" /><br><br></p>
+                        <p class="centred"><a href="#" class="addToCart">Continue to Checkout</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- - - - - - - - - - - - - NEWSLETTER SIGN UP BAR - - - - - - - - - - - - -->
+        <footer class="row">
+            <div class="col-3">
+
+                <h2>Sign up to our newsletter</h2>
+            </div>
+            <div class="col-5">
+                <!-- - - - - - - - - - - - - SIGN-UP FORM - - - - - - - - - - - - -->
+                <input id="userNameInput" class="newsletterField" type="text" placeholder="name">
+                <p id="nameMessage"></p>
+                <input id="userEmailInput" class="newsletterField" type="text" placeholder="email">
+                <p id="emailMessage"></p>
+                <input id="newsletterSubmitButton" class="button newsletterField" type="button" value="submit" onclick="newsletterValidator();">
+
+            </div>
+            <div class="col-4" id="socialMediaIcons">
+                <img src="images/icons/socialMediaIcons.png" class="socialMediaIcons" alt="Social Media">
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- - - - - - - - - - - SCRIPT FOR SLIDE-OUT MENU - - - - - - - - - - -->
+    <script src="scripts/slideoutBottomScript.js" type="text/javascript"></script>
+</body>
+
+</html>

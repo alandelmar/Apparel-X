@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<!--
+PRODUCTS PAGE
+-->
+<html>
+
+<head>
+    <title>Products</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="images/webicon.png">
+
+    <link href="scripts/apparelxstylesheet.css" rel="stylesheet" type="text/css" />
+
+    <script src="scripts/slideout.min.js" type="text/javascript"></script>
+    <script src="scripts/newsletterValidation.js" type="text/javascript"></script>
+    <!-- PRODUCT REFINING SCRIPT -->
+    <script src="scripts/refineProducts.js" type="text/javascript"></script>
+
+
+    <!-- SCRIPT TO ADD PRICE OF SELECTED ITEM TO SHOPPING CART -->
+    <script src="scripts/addPrice.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+    <!-- - - - - - - - - - - MOBILE SLIDE OUT MENU - - - - - - - - - - -->
+    <div id="menu">
+        <ul id="menuList">
+            <li class="searchHolder"> <input class="searchbar" type="text" value="" placeholder="search">
+                <img class="searchIconMobile" src="images/icons/search.png" alt="" />
+            </li>
+            <li id="home"><a class="third after" href="index.html">home</a></li>
+            <li id="products"><a class="third after" href="products.html">products</a></li>
+            <li id="shoppingCart"><a class="third after" href="shoppingcart.html">shopping cart</a></li>
+            <li id="contact"><a class="third after" href="contact.html">contact</a></li>
+        </ul>
+    </div>
+
+    <!-- - - - - - - - - - - - - DESKTOP SEARCH BAR - - - - - - - - - - - - -->
+    <div class="hideOutForMobile">
+        <img src="images/icons/search.png" class="searchIconDesktop" alt="" />
+        <div class="desktopSearchBar">
+        </div>
+        <div class="spacer"> </div>
+
+        <input class="searchbarDesktopTop" type="text" value="" placeholder="search">
+    </div>
+
+    <!-- - - - - - - - - - - - - MOBILE HEADER - - - - - - - - - - - - -->
+    <main id="panel">
+        <div class="row">
+            <div class="col12Header">
+                <header>
+                    <img class="toggle-button" onclick="toggleButton();" src="images/icons/hamburger.png" alt="" />
+                    <div id="headerLogo"></div>
+
+                    <!-- - - - - - - - - - - - - SHOPPING CART COUNTER - - - - - - - - - - - - -->
+                    <table class="shoppingCart">
+                        <tr>
+                            <td>
+                                <p id="shoppingCartItems">0</p>
+                            </td>
+                            <td>
+
+                                <a href="shoppingcart.html">
+                                    <img src="images/icons/shoppingcart.png" id="trolley" alt="Shopping Cart" />
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                    <!-- - - - - - - - - - - - -  DESKTOP NAV BAR - - - - - - - - - - - - -->
+                    <div class="alignRight">
+                        <ul id="desktopNavBar" class="hideOutForMobile">
+                            <li><a class="third after" href="index.html">home</a></li>
+                            <li><a class="third after" href="products.html">products</a></li>
+                            <li><a class="third after" href="shoppingcart.html">shopping cart</a></li>
+                            <li><a class="third after" href="contact.html">contact</a></li>
+                        </ul>
+                    </div>
+                </header>
+            </div>
+        </div>
+
+        <!-- - - - - - - - - - - REFINE BAR - - - - - - - - - - -->
+        <div class="row">
+            <div class="col-12">
+                <div class="marginTopSpace">
+                    <div class="dropdownMenu">
+                        <select id="dropdownMenuList" onchange="refineProducts();" name="refine">
+                    <option value="refine by">refine by:</option>
+                    <option value="all">All</option>
+                    <option value="mens">Mens</option>
+                    <option value="womens">Womens</option>
+                </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="productDisplay">
+
+
+
+            <div class="row">
+                <div class="col-6">
+
+                    <!-- 1 - - - - - - - - - - BLAZER - - - - - - - - - - -->
+                    <table class="productPanel">
+                        <tr>
+                            <td width="50%">
+                                <img class="clothingPhoto" src="images/clothes/blazer.jpg" alt="Blazer" />
+                            </td>
+                            <td class="productDetails">
+                                <h3 class="productName">Blazer</h3>
+                                <p><b>€200.00</b></p>
+                                <p class="desktopItemInformation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a laoreet elit.</p>
+                                <p>
+                                    <select name="size">
+                                    <option value="select">size</option>
+                                    <option value="small">small</option>
+                                    <option value="small">medium</option>
+                                    <option value="small">large</option>
+                                </select>
+                                    <select name="qty" id="quantity">
+                                    <option value="select">qty</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                </p>
+                                <p><a href="javascript:;" class="addToCart" id="blazer" onclick="addPrice(200)">Add to Cart</a></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- 2 - - - - - - - - - - JUMPER_MENS1 - - - - - - - - - - -->
+                <div class="col-6">
+                    <table class="productPanel">
+                        <tr>
+                            <td width="50%">
+                                <img class="clothingPhoto" src="images/clothes/jumper_mens1.jpg" alt="Black Jumper" />
+                            </td>
+                            <td class="productDetails">
+                                <h3 class="productName">Black Jumper</h3>
+                                <p><b>€89.00</b></p>
+                                <p class="desktopItemInformation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a laoreet elit.</p>
+                                <p>
+                                    <select name="size">
+                                    <option value="select">size</option>
+                                    <option value="small">small</option>
+                                    <option value="small">medium</option>
+                                    <option value="small">large</option>
+                                </select>
+                                    <select name="qty">
+                                    <option value="select">qty</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                </p>
+                                <p><a href="javascript:;" class="addToCart" id="blackJumper" onclick="addPrice(89)">Add to Cart</a></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- - - - - - - - - - - - DIVS TO SNAP THE LAYOUT INTO DESKTOP MODE: ROW 3 - - - - - - - - - - -->
+            <div class="row">
+                <div class="col-6">
+                    <!-- 3 - - - - - - - - - - BLUE JUMPER - - - - - - - - - - -->
+                    <table class="productPanel">
+                        <tr>
+                            <td width="50%">
+                                <img class="clothingPhoto" src="images/clothes/jumper_mens2.jpg" alt="Blue Jumper" />
+                            </td>
+                            <td class="productDetails">
+                                <h3 class="productName">Blue Jumper</h3>
+                                <p><b>€89.00</b></p>
+                                <p class="desktopItemInformation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a laoreet elit.</p>
+                                <p>
+                                    <select name="size">
+                                    <option value="select">size</option>
+                                    <option value="small">small</option>
+                                    <option value="small">medium</option>
+                                    <option value="small">large</option>
+                                </select>
+                                    <select name="qty">
+                                    <option value="select">qty</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                </p>
+                                <p><a href="javascript:;" class="addToCart" id="blueJumper" onclick="addPrice(89)">Add to Cart</a></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- 4 - - - - - - - - - - WHITE JUMPER - - - - - - - - - - -->
+                <div class="col-6">
+                    <table class="productPanel">
+                        <tr>
+                            <td width="50%">
+                                <img class="clothingPhoto" src="images/clothes/jumper_mens3.jpg" alt="White Jumper" />
+                            </td>
+                            <td class="productDetails">
+                                <h3 class="productName">White Jumper</h3>
+                                <p><b>€89.00</b></p>
+                                <p class="desktopItemInformation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a laoreet elit.</p>
+                                <p>
+                                    <select name="size">
+                                    <option value="select">size</option>
+                                    <option value="small">small</option>
+                                    <option value="small">medium</option>
+                                    <option value="small">large</option>
+                                </select>
+                                    <select name="qty">
+                                    <option value="select">qty</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                </p>
+                                <p><a href="javascript:;" class="addToCart" id="whiteJumper" onclick="addPrice(89)">Add to Cart</a></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <table class="productPanel">
+                        <tr>
+                            <td width="50%">
+                                <img class="clothingPhoto" src="images/clothes/tshirt.jpg" alt="T-Shirt" />
+                            </td>
+                            <td class="productDetails">
+                                <h3 class="productName">T-shirt</h3>
+                                <p><b>€40.00</b></p>
+                                <p class="desktopItemInformation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a laoreet elit.</p>
+                                <p>
+                                    <select name="size">
+                                    <option value="select">size</option>
+                                    <option value="small">small</option>
+                                    <option value="small">medium</option>
+                                    <option value="small">large</option>
+                                </select>
+                                    <select name="qty">
+                                    <option value="select">qty</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                </p>
+                                <p><a href="javascript:;" class="addToCart" id="tshirt" onclick="addPrice(40)">Add to Cart</a></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="col-6">
+                    <!-- 6 - - - - - - - - - - MENS SHOES - - - - - - - - - - -->
+                    <table class="productPanel">
+                        <tr>
+                            <td width="50%">
+                                <img class="clothingPhoto" src="images/clothes/shoes_mens.jpg" alt="Mens Shoes" />
+                            </td>
+                            <td class="productDetails">
+                                <h3 class="productName">Mens Shoes</h3>
+                                <p><b>€230.00</b></p>
+                                <p class="desktopItemInformation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a laoreet elit.</p>
+                                <p>
+                                    <select name="size">
+                                    <option value="select">size</option>
+                                    <option value="small">7</option>
+                                    <option value="small">8</option>
+                                    <option value="small">9</option>
+                                </select>
+                                    <select name="qty">
+                                    <option value="select">qty</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                </p>
+                                <p><a href="javascript:;" class="addToCart" id="mensShoes" onclick="addPrice(230)">Add to Cart</a></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- 7 - - - - - - - - - - CARDIGAN - - - - - - - - - - -->
+            <div class="row">
+                <div class="col-6">
+                    <table class="productPanel">
+                        <tr>
+                            <td width="50%">
+                                <img class="clothingPhoto" src="images/clothes/cardigan.jpg" alt="Cardigan" />
+                            </td>
+                            <td class="productDetails">
+                                <h3 class="productName">Cardigan</h3>
+                                <p><b>€75.00</b></p>
+                                <p class="desktopItemInformation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a laoreet elit.</p>
+                                <p>
+                                    <select name="size">
+                                    <option value="select">size</option>
+                                    <option value="small">small</option>
+                                    <option value="small">medium</option>
+                                    <option value="small">large</option>
+                                </select>
+                                    <select name="qty">
+                                    <option value="select">qty</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                </p>
+                                <p><a href="javascript:;" class="addToCart" id="cardigan" onclick="addPrice(75)">Add to Cart</a></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+
+                <!-- - - - - - - - - - - - DIVS TO SNAP THE LAYOUT INTO DESKTOP MODE: ROW 2 - - - - - - - - - - -->
+
+                <!-- 8 - - - - -  - - - - - CREAM DRESS - - - - - - - - - - -->
+                <div class="col-6">
+                    <table class="productPanel">
+                        <tr>
+                            <td width="50%">
+                                <img class="clothingPhoto" src="images/clothes/dress1.jpg" alt="Cream Dress" />
+                            </td>
+                            <td class="productDetails">
+                                <h3 class="productName">Cream dress</h3>
+                                <p><b>€195.00</b></p>
+                                <p class="desktopItemInformation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a laoreet elit.</p>
+                                <p>
+                                    <select name="size">
+                                    <option value="select">size</option>
+                                    <option value="small">small</option>
+                                    <option value="small">medium</option>
+                                    <option value="small">large</option>
+                                </select>
+                                    <select name="qty">
+                                    <option value="select">qty</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                </p>
+                                <p><a href="javascript:;" class="addToCart" id="creamDress" onclick="addPrice(195)">Add to Cart</a></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <!-- 9 - - - - - - - - - - PINK DRESS - - - - - - - - - - -->
+                    <table class="productPanel">
+                        <tr>
+                            <td width="50%">
+                                <img class="clothingPhoto" src="images/clothes/dress2.jpg" alt="Pink Dress" />
+                            </td>
+                            <td class="productDetails">
+                                <h3 class="productName">Pink Dress</h3>
+                                <p><b>€180.00</b></p>
+                                <p class="desktopItemInformation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a laoreet elit.</p>
+                                <p>
+                                    <select name="size">
+                                    <option value="select">size</option>
+                                    <option value="small">small</option>
+                                    <option value="small">medium</option>
+                                    <option value="small">large</option>
+                                </select>
+                                    <select name="qty">
+                                    <option value="select">qty</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                </p>
+                                <p><a href="javascript:;" class="addToCart" id="pinkDress" onclick="addPrice(180)">Add to Cart</a></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- 10 - - - - - - - - - - TWO-TONE DRESS - - - - - - - - - - -->
+                <div class="col-6">
+                    <table class="productPanel">
+                        <tr>
+                            <td width="50%">
+                                <img class="clothingPhoto" src="images/clothes/dress3.jpg" alt="Two-Tone Dress" />
+                            </td>
+                            <td class="productDetails">
+                                <h3 class="productName">Two-tone dress</h3>
+                                <p><b>€190.00</b></p>
+                                <p class="desktopItemInformation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a laoreet elit.</p>
+                                <p>
+                                    <select name="size">
+                                    <option value="select">size</option>
+                                    <option value="small">small</option>
+                                    <option value="small">medium</option>
+                                    <option value="small">large</option>
+                                </select>
+                                    <select name="qty">
+                                    <option value="select">qty</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                </p>
+                                <p><a href="javascript:;" class="addToCart" id="twotoneDress" onclick="addPrice(190)">Add to Cart</a></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <!-- 11 - - - - - - - - - - SLACKS - - - - - - - - - - -->
+                    <table class="productPanel">
+                        <tr>
+                            <td width="50%">
+                                <img class="clothingPhoto" src="images/clothes/slacks.jpg" alt="Slacks" />
+                            </td>
+                            <td class="productDetails">
+                                <h3 class="productName">Slacks</h3>
+                                <p><b>€140.00</b></p>
+                                <p class="desktopItemInformation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a laoreet elit.</p>
+                                <p>
+                                    <select name="size">
+                                    <option value="select">size</option>
+                                    <option value="small">small</option>
+                                    <option value="small">medium</option>
+                                    <option value="small">large</option>
+                                </select>
+                                    <select name="qty">
+                                    <option value="select">qty</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                </p>
+                                <p><a href="javascript:;" class="addToCart" id="slacks" onclick="addPrice(140)">Add to Cart</a></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="col-6">
+                    <!-- 10 - - - - - - - - - - LADIES SHOES - - - - - - - - - - -->
+                    <table class="productPanel">
+                        <tr>
+                            <td width="50%">
+                                <img class="clothingPhoto" src="images/clothes/shoe.jpg" alt="Ladies Shoes" />
+                            </td>
+                            <td class="productDetails">
+                                <h3 class="productName">Ladies Shoes</h3>
+                                <p><b>€210.00</b></p>
+                                <p class="desktopItemInformation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a laoreet elit.</p>
+                                <p>
+                                    <select name="size">
+                                    <option value="select">size</option>
+                                    <option value="small">small</option>
+                                    <option value="small">medium</option>
+                                    <option value="small">large</option>
+                                </select>
+                                    <select name="qty">
+                                    <option value="select">qty</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                </p>
+                                <p><a href="javascript:;" class="addToCart" id="ladiesShoes" onclick="addPrice(210)">Add to Cart</a></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <!-- - - - - - - - - - - - - NEWSLETTER SIGN UP BAR - - - - - - - - - - - - -->
+        <footer class="row">
+            <div class="col-3">
+
+                <h2>Sign up to our newsletter</h2>
+            </div>
+            <div class="col-5">
+                <!-- - - - - - - - - - - - - SIGN-UP FORM - - - - - - - - - - - - -->
+                <input id="userNameInput" class="newsletterField" type="text" placeholder="name">
+                <p id="nameMessage"></p>
+                <input id="userEmailInput" class="newsletterField" type="text" placeholder="email">
+                <p id="emailMessage"></p>
+                <input id="newsletterSubmitButton" class="button newsletterField" type="button" value="submit" onclick="newsletterValidator();">
+
+            </div>
+        </footer>
+
+    </main>
+    <!-- - - - - - - - - - - SCRIPT FOR SLIDE-OUT MENU - - - - - - - - - - -->
+    <script src="scripts/slideoutBottomScript.js" type="text/javascript"></script>
+
+
+    <!-- - - - - - - - - - - SETTING COUNTER FOR SHOPPING CART TO 0 - - - - - - - - - - - -->
+    <script src="scripts/shoppingCartCounter.js" type="text/javascript"></script>
+</body>
+
+</html>
